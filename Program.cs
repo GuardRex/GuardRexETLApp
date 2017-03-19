@@ -35,9 +35,7 @@ namespace GuardRexETLApp
 
                 var pullRequestsForDotnetDocs = await client.PullRequest.GetAllForRepository("dotnet", "docs", pullRequestRequest);
 
-                var filteredPullRequests = pullRequestsForDotnetDocs.Where(t => 
-                    t.Assignee != null && 
-                    t.Assignee.Login == "GuardRex");
+                var filteredPullRequests = pullRequestsForDotnetDocs.Where(t => t.Assignee?.Login == "GuardRex");
 
                 foreach (var pr in filteredPullRequests)
                 {
