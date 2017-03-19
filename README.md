@@ -1,3 +1,3 @@
 # GuardRexETLApp
 
-![screenshot(https://raw.githubusercontent.com/GuardRex/GuardRexETLApp/master/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/GuardRex/GuardRexETLApp/master/screenshot.png)
