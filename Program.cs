@@ -61,7 +61,7 @@ namespace GuardRexETLApp
                 if (endDateStr.Length != 0)
                 {
                     var tempDate = Convert.ToDateTime(endDateStr);
-                    endDate = new DateTime(tempDate.Year, tempDate.Month, tempDate.Day, 0, 0, 0);
+                    endDate = new DateTime(tempDate.Year, tempDate.Month, tempDate.Day, 23, 59, 59);
                 }
 
                 saveFilepath = Path.Combine(saveFilepath, $"Data_{startDate.Month}-{startDate.Day}-{startDate.Year}_{endDate.Month}-{endDate.Day}-{endDate.Year}.txt");
