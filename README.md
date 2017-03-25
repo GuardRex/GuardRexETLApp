@@ -1,6 +1,6 @@
 # GuardRexETLApp
 
-* Provide your `<GITHUB_USER_Login` (e.g., for me: GuardRex)
+* Provide your `<GITHUB_USER_LOGIN` (e.g., for me: GuardRex)
 * Obtain and provide a GitHub personal access token from the Settings area of your GH account.
 * Update the file path using your Windows login user (or use some other path)
 
