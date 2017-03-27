@@ -57,7 +57,7 @@ namespace GuardRexETLApp
                     startDate = new DateTime(tempDate.Year, tempDate.Month, tempDate.Day, 0, 0, 0);
                 }
 
-                var endDate = new DateTime(DateTime.UtcNow.Year, DateTime.UtcNow.Month, DateTime.UtcNow.Day, 23, 59, 59);var endDate = new DateTime(DateTime.Today.ToLocalTime().Year, DateTime.Today.ToLocalTime().Month, DateTime.Today.ToLocalTime().Day, 23, 59, 59);
+                var endDate = new DateTime(DateTime.Today.ToLocalTime().Year, DateTime.Today.ToLocalTime().Month, DateTime.Today.ToLocalTime().Day, 23, 59, 59);
                 if (endDateStr.Length != 0)
                 {
                     var tempDate = Convert.ToDateTime(endDateStr);
