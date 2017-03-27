@@ -50,14 +50,14 @@ namespace GuardRexETLApp
                 var client = new GitHubClient(new ProductHeaderValue("GuardRex-Pull-Request-ETL-Application"));
                 client.Credentials = tokenAuth;
 
-                var startDate = DateTime.Today.AddDays(-7);
+                var startDate = DateTime.Today.AddDays(-6);
                 if (startDateStr.Length != 0)
                 {
                     var tempDate = Convert.ToDateTime(startDateStr);
                     startDate = new DateTime(tempDate.Year, tempDate.Month, tempDate.Day, 0, 0, 0);
                 }
 
-                var endDate = new DateTime(DateTime.UtcNow.Year, DateTime.UtcNow.Month, DateTime.UtcNow.Day, 23, 59, 59);
+                var endDate = new DateTime(DateTime.UtcNow.Year, DateTime.UtcNow.Month, DateTime.UtcNow.Day, 23, 59, 59);var endDate = new DateTime(DateTime.Today.ToLocalTime().Year, DateTime.Today.ToLocalTime().Month, DateTime.Today.ToLocalTime().Day, 23, 59, 59);
                 if (endDateStr.Length != 0)
                 {
                     var tempDate = Convert.ToDateTime(endDateStr);
@@ -101,7 +101,7 @@ namespace GuardRexETLApp
                 }
 
                 Console.WriteLine();
-                Console.WriteLine($"Start Date: {startDate} End Date: {endDate} PRs written: {searchResults.Items.Count}");
+                Console.WriteLine($"Start Date: {startDate} UTC End Date: {endDate} UTC PRs written: {searchResults.Items.Count}");
                 /*
                 Console.WriteLine();
                 var apiInfo = client.GetLastApiInfo();
