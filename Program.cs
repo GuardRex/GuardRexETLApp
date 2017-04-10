@@ -91,7 +91,7 @@ namespace GuardRexETLApp
                     {
                         foreach (var pr in searchResults.Items)
                         {
-                            writer.WriteLine($"{pr.Title} - {pr.Url}");
+                            writer.WriteLine($"{pr.Title} - {pr.PullRequest.HtmlUrl}");
                         }
                     }
                     else
